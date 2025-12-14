@@ -1,0 +1,49 @@
+{
+  "format_version": "1.20.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "tatya:miner",
+      "is_spawnable": true,
+      "is_summonable": true
+    },
+
+    "components": {
+      "minecraft:nameable": {},
+
+      "minecraft:type_family": {
+        "family": ["tatya", "robot"]
+      },
+
+      "minecraft:health": {
+        "value": 20,
+        "max": 20
+      },
+
+      "minecraft:movement": {
+        "value": 0.25
+      },
+
+      "minecraft:behavior.follow_owner": {
+        "priority": 1,
+        "speed_multiplier": 1.0,
+        "start_distance": 2,
+        "stop_distance": 1
+      },
+
+      "minecraft:behavior.break_block": {
+        "priority": 2,
+        "speed": 1.0,
+        "target_blocks": [
+          "minecraft:stone",
+          "minecraft:coal_ore",
+          "minecraft:iron_ore",
+          "minecraft:copper_ore"
+        ]
+      },
+
+      "minecraft:behavior.random_stroll": {
+        "priority": 3
+      }
+    }
+  }
+}
